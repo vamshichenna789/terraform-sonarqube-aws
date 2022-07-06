@@ -1,4 +1,4 @@
 resource "aws_security_group" "vamshi" {
-  name        = "allow-http-ssh"
+  name        = "vamshi"
   description = "Allow Ingress rules to allow SSH and HTTP connections"
 }
