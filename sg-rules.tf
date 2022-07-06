@@ -4,7 +4,7 @@ resource "aws_security_group_rule" "ingress_ssh" {
   to_port           = 22
   protocol          = "tcp"
   cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = aws_security_group.allow_http_ssh.id
+  security_group_id = aws_security_group.vamshi.id
 }
 
 resource "aws_security_group_rule" "ingress_http" {
@@ -13,7 +13,7 @@ resource "aws_security_group_rule" "ingress_http" {
   to_port           = 80
   protocol          = "tcp"
   cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = aws_security_group.allow_http_ssh.id
+  security_group_id = aws_security_group.vamshi.id
 }
 
 resource "aws_security_group_rule" "egress_allow_all" {
@@ -22,6 +22,6 @@ resource "aws_security_group_rule" "egress_allow_all" {
   protocol          = "-1"
   from_port         = 0
   cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = aws_security_group.allow_http_ssh.id
+  security_group_id = aws_security_group.vamshi.id
 }
 
